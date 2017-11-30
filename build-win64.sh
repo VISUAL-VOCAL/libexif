@@ -27,6 +27,7 @@ echo " TARGET_HOST = ${TARGET_HOST}"
 cd ${SOURCE_DIRECTORY}
 mkdir --parents ${BUILD_DIRECTORY}
 cd ${BUILD_DIRECTORY}
-sh ${SOURCE_DIRECTORY}/configure --host=${TARGET_HOST} $*
+sh ${SOURCE_DIRECTORY}/configure --host=${TARGET_HOST} --disable-nls $*
 make
+make install-strip
 
