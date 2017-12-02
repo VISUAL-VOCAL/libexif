@@ -14,7 +14,8 @@ include pentax/Makefile-files
 lib_LTLIBRARIES += libexif.la
 libexif_la_LDFLAGS = \
 	-export-symbols $(srcdir)/libexif.sym \
-	-no-undefined -version-info @LIBEXIF_VERSION_INFO@
+	-no-undefined -version-info @LIBEXIF_VERSION_INFO@ \
+        -avoid-version
 libexif_la_SOURCES =		\
 	exif-byte-order.c	\
 	exif-content.c		\
