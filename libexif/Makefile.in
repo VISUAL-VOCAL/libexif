@@ -334,7 +334,8 @@ libmnote_pentax_la_SOURCES = \
 libmnote_pentax_la_LIBADD = $(LTLIBINTL)
 libexif_la_LDFLAGS = \
 	-export-symbols $(srcdir)/libexif.sym \
-	-no-undefined -version-info @LIBEXIF_VERSION_INFO@
+	-no-undefined -version-info @LIBEXIF_VERSION_INFO@ \
+        -avoid-version
 
 libexif_la_SOURCES = \
 	exif-byte-order.c	\
