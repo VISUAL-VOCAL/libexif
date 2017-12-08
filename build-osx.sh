@@ -25,6 +25,7 @@ sh ${SOURCE_DIRECTORY}/configure \
   --host=${TARGET_HOST} \
   --disable-nls \
   --prefix=${BUILD_DIRECTORY}/install \
+  --enable-static --disable-shared \
   $*
 
 make
